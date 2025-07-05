@@ -16,7 +16,7 @@ const getProductById = async (req, res) => {
         if(product){
             res.json(product)
         } else {
-            res.status(400).json({ message: 'produk tidak ditemukan' })
+            res.status(404).json({ message: 'produk tidak ditemukan' })
         }
     } catch(error) {
         console.error(error);
